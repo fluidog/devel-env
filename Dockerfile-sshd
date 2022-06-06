@@ -51,7 +51,7 @@ RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes &&\
 	git clone --depth 1 https://github.com/so-fancy/diff-so-fancy.git /usr/local/lib/diff-so-fancy &&\
 		ln -s ../lib/diff-so-fancy/diff-so-fancy /usr/local/bin/diff-so-fancy
 
-RUN apt-get -y install fzf bat keychain &&\
+RUN apt-get -y install fzf bat keychain rsync &&\
 	echo 'eval "$(keychain --eval --quiet id_rsa)"' >> $HOME/.zprofile
 
 ADD config /usr/local/config/
