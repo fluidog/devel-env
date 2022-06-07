@@ -19,6 +19,8 @@ services:
       - /root/workspace:/root/workspace
 
   samba:
+    profiles:
+      - samba
     image: dperson/samba
     ports:
       - "139:139"
@@ -37,16 +39,18 @@ services:
       -g "directory mask = 0755" -g "force directory mode = 0"
       '
 
-  # nfs-server:
-  #   image: gists/nfs-server
-  #   ports:
-  #     - "2049:2049"
-  #   environment:
-  #     NFS_OPTION: "fsid=root,rw,sync,insecure,all_squash,anonuid=0,anongid=0,no_subtree_check"
-  #   privileged: true
-  #   volumes:
-  #     - /root/workspace/:/nfs-share
-  #
+  nfs-server:
+    profiles:
+      - nfs-server
+    image: gists/nfs-server
+    ports:
+      - "2049:2049"
+    environment:
+      NFS_OPTION: "fsid=root,rw,sync,insecure,all_squash,anonuid=0,anongid=0,no_subtree_check"
+    privileged: true
+    volumes:
+      - /root/workspace/:/nfs-share
+  
 
 networks:
   default:

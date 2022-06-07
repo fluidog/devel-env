@@ -23,7 +23,7 @@ RUN apt-get -y install ca-certificates curl gnupg lsb-release &&\
 	apt-get -y update &&\
 	apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-ENV ALL_PROXY=socks5://192.168.0.107:7890
+ENV ALL_PROXY=socks5://172.25.150.116:7890
 #ENV MIRRO_GITHUB=https://hub.fastgit.xyz
 
 RUN locale-gen en_US.UTF-8 &&\
