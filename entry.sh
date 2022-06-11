@@ -9,6 +9,7 @@ git config --global url.git@github.com:fluidog.pushInsteadOf https://github.com/
 
 
 # ssh config
+
 cat >~/.ssh/config  <<<"StrictHostKeyChecking no"
 
 # Add some public key from the host which you want login from.
@@ -22,7 +23,6 @@ uo2Ctg+cf5Uf9qvOi5ojWj8mFLfvEkzTaYOcUMqZ/rIGPu0vv58B2ZxfY+klP6hWmU8sDcbTWg0H6ZeH
 N1kD2SKvLi6oZklzW8DmywnSRPlxCdakvDxV+KvRNpOfRW78K6I8wXRN1ps6Kksuz2oCrmYVYOfb5kMVi7U6\
 8oBJYPDimm5/tliNeHIXfgopp+m2Q3F/U1/0GoOUjkI+7KdBDuL8HlaGy9YteYGJKCWWDTo+X2JEbUb8/GiO\
 kzsYv6iXqWJR93LDpm6xQYfo7eU1myfvFiDfEIl2QGRN4KwU= root@fluidog-workspace"
-
 
 
 # Default login shell
