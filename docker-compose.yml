@@ -16,6 +16,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /lib/modules:/lib/modules
       - /usr/src:/usr/src
+      - /run/tmux-keep:/run/tmux-keep
       - /root/workspace:/root/workspace
 
   samba:
