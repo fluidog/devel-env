@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 SHELL ["/bin/bash", "-c"]
 
@@ -55,6 +55,8 @@ RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes &&\
 		ln -s ../lib/diff-so-fancy/diff-so-fancy /usr/local/bin/diff-so-fancy
 
 RUN apt-get -y install fzf bat rsync
+
+#RUN ALL_PROXY= pip install pysocks gitpython requests rich
 
 ADD config /usr/local/config/
 ADD entry.sh /usr/local/bin/
